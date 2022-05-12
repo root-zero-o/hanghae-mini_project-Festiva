@@ -1,2 +1,3 @@
-# hanghae-mini_project-Festiva
-항해99 7기 13조 미니프로젝트 Festiva!
+# 🎇Festiva!(페스티바)🎇
+  
+항해99 7기 13조의 첫 미니프로젝트 'Festiva!(페스티바)'입니다.
