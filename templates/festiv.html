@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/common.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/99af00623e.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+ <!--  구글폰트link  -->
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+
+    <title>축제 상세정보</title>
+</head>
+<style>
+     .title{
+            margin: 40px;
+            text-align: center;
+     }
+     .fesiv_card{
+             display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;}
+    .row{
+        background-color: #FFE2D2;
+    }
+
+     .badge{
+         margin: 0 15px 0 0;
+     }
+     .row{
+
+        max-width: 600px;
+     }
+     .card-text{
+         min-width: 500px;
+     }
+     .more{
+          display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+             margin-bottom: 20px;
+     }
+     .why{
+         text-decoration: none;
+         color: black;
+
+     }
+     .why:hover{
+         text-decoration: none;
+         color: black;
+     }
+</style>
+<script>
+    // $(document).ready(function () {
+    //     show_festival();
+    // });
+</script>
+<body>
+<div class="mini_menu">
+    <a href="/review">리뷰</a>
+    ||
+    <a href="/">홈</a>
+</div>
+<div class="mytitle">
+</div>
+
+<div>
+    <h2 class="title"> 🎉올해의 축제 리스트🎉 </h2>
+</div>
+{% for item in items %}
+    {% if '2022' in item.fstvlStartDate %}
+    <div class="fesiv_card" id="festiv_list">
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <p class="card-text"><span class="badge bg-dark">이름</span>{{ item.fstvlNm }}</p>
+                        <p class="card-text"><span class="badge bg-dark">기간</span>{{ item.fstvlStartDate }}
+                            ~ {{ item.fstvlEndDate }}</p>
+                        <p class="card-text"><span class="badge bg-dark">장소</span>{{ item.rdnmadr }}</p>
+                        <p class="card-text"><span class="badge bg-dark">내용</span>{{ item.fstvlCo }}</p>
+                        {% if item.homepageUrl != "" %}
+                            <a href="{{ item.homepageUrl }}" target="_blank">
+                                <button class="mybtn">축제에 대해 더 알아보기!</button>
+                            </a>
+
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+{% endfor %}
+
+<div class="more">
+    <button class="mybtn">
+        <a class="why" href="https://korean.visitkorea.or.kr/main/main.do#home" target="_blank">
+            더 많은 축제 보기
+        </a>
+    </button>
+</div>
+
+<div class="copy">&copy; copyright by 🙋‍♂️항해 99 7기 13조원들🙋‍♀
+<a class="git" href="https://github.com/hanggae99-7-13" target="_blank">Github</a>
+</div>
+
+
+</body>
+</html>

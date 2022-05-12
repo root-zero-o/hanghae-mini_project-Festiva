@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Festiva!</title>
+    <link href="{{ url_for('static', filename='home.css') }}" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/da923577fc.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="video_wrapper">
+        <video src="{{ url_for('static', filename='fireworks.mp4') }}" autoplay loop muted></video>
+        <div class="wrap"></div>
+    </div>
+    <div class="title_content">
+        <div class="logo">
+            <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FmY0i2%2FbtrBKwu6lkm%2F0RWBb3RWJp0KNrXTWV6vq0%2Fimg.png"/>
+        </div>
+        <a href="/login"><button>Go</button></a>
+    </div>
+    <div class="SNS">
+        <a href="https://github.com/hanggae99-7-13/festiva123"><i class="fa-brands fa-github-alt"> Github</i></a>
+    </div>
+</body>
+</html>

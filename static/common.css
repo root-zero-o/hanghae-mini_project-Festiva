@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+    * {
+            font-family: 'Gowun Dodum', sans-serif;
+        }
+     /*배너*/
+     .mytitle {
+            width: 100%;
+            height: 150px;
+
+            background-color: #FFE2D2;
+            background-image: url("logo.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+
+        }
+     /*배너 위 미니메뉴 - 배너 위에
+     <a href="/review">리뷰</a>
+    ||
+    <a href="/mypage">마이페이지</a>
+    형식으로 필요한 메뉴 넣기*/
+
+     .mini_menu{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: right;
+
+
+
+         padding: 5px 5px 10px 0;
+
+         background-color: #FFE2D2;
+     }
+     .mini_menu > a {
+         margin: 0 5px;
+         text-decoration: none;
+         color: #c47c59;
+     }
+     .mini_menu > a:hover{
+         color: gray;
+     }
+
+    /* 버튼*/
+    .mybtn{
+        border-radius: 6px;
+        border: #FDAB7D;
+
+        background-color: #FDAB7D;
+
+        padding: 4px 6px;
+    }
+    .mybtn:hover{
+        background-color: rgba(253, 171, 125, 0.71);
+    }
+
+    /*아래 바*/
+    .copy {
+        text-align: center;
+        height: 100px;
+        line-height: 100px;
+        background-color: #FFE2D2;
+    }
+    .copy > a{
+        color: #c47c59;
+    }
+    .copy > a:hover{
+        color: rgba(253, 171, 125, 0.71);
+    }
+
